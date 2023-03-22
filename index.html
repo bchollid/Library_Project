@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Project</title>
+    <style>
+      input {
+        color: grey;
+        text-align: center;
+      }
+      button:hover, input:hover{
+        cursor: pointer;
+      }
+      </style>
   </head>
   <body>
     <main
@@ -26,19 +35,13 @@
                 <th>Read</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Name of the Wind</td>
-                <td>Patrick Rothfuss</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    name="read"
-                    id="readLibraryCheckbox"
-                    checked
-                    disabled
-                  />
-                </td>
+            <tbody id="table-body">
+              <tr id="input-block">
+                <td><input type="text" value="Enter Book Title" onfocus="this.value=''" id="title-input"></td>
+                <td><input type="text" value="Enter Author's Name" onfocus="this.value=''" id="author-input"></td>
+                <td><input type="checkbox" name="read" id="checkbox-id" class="checkbox-class"></td>
+                <td><button type="submit" id="submit">Submit</button></td>
+                <td><button type="submit" id="remove">Remove</button></td>
               </tr>
             </tbody>
           </table>
